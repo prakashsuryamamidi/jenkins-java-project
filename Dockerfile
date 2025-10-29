@@ -16,6 +16,7 @@ WORKDIR /usr/local/tomcat/bin
 # Expose application port
 EXPOSE 8084
 
+RUN sed -i 's/port="8080"/port="8084"/' /usr/local/tomcat/conf/server.xml
 
 # Run Tomcat
 CMD ["catalina.sh", "run"]
