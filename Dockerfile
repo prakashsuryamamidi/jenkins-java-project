@@ -9,7 +9,7 @@ FROM tomcat:9-jdk17
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy your WAR file into Tomcat as ROOT.war
-COPY /var/lib/jenkins/workspace/demo-pipeline/target/*.war /usr/local/tomcat/webapps/
+COPY ./target/*.war /usr/local/tomcat/webapps/
 
 # Expose application port
 EXPOSE 8084
