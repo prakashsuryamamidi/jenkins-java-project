@@ -11,7 +11,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # Copy your WAR file into Tomcat as ROOT.war
 COPY ./target/*.war /usr/local/tomcat/webapps/
 
-WORKDIR /tomcat-9-jdk17/bin
+WORKDIR /usr/local/tomcat/bin
 
 # Expose application port
 EXPOSE 8084
